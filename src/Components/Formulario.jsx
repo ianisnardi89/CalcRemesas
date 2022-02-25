@@ -86,6 +86,10 @@ const Formulario = () => {
     }
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div
       className="container"
@@ -99,7 +103,10 @@ const Formulario = () => {
       }}
     >
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -131,7 +138,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -163,7 +173,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -195,7 +208,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -227,7 +243,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -259,7 +278,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -291,7 +313,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
@@ -323,7 +348,10 @@ const Formulario = () => {
         </form>
       </div>
       <div className="contenedor">
-        <form style={{ justifyContent: "center", display: "flex" }}>
+        <form
+          style={{ justifyContent: "center", display: "flex" }}
+          onSubmit={handleSubmit}
+        >
           <div
             className="mb-3 pb-0"
             style={{
