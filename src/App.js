@@ -12,6 +12,10 @@ function App() {
         </div>
         <Formulario />
       </div>
+
+      <p className="para">
+        Isnardi Bieber Ian - &copy; {new Date().getFullYear()}
+      </p>
     </body>
   );
 }

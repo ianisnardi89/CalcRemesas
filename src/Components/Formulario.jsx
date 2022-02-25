@@ -1,13 +1,83 @@
 import React, { useState } from "react";
 
 const Formulario = () => {
-  const [Mil, setResultado] = useState(0);
+  const [Mil, setMil] = useState(0);
 
   const handleChangeMil = (e) => {
-    setResultado(parseFloat(e.target.value) * 1000);
+    const suma = parseFloat(e.target.value);
+
+    setMil(suma);
   };
 
-  const remesa = Mil + 10;
+  const [Qui, setQui] = useState(0);
+
+  const handleChangeQui = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setQui(suma);
+  };
+
+  const [Dos, setDos] = useState(0);
+
+  const handleChangeDos = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setDos(suma);
+  };
+
+  const [Cien, setCien] = useState(0);
+
+  const handleChangeCien = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setCien(suma);
+  };
+
+  const [Cin, setCin] = useState(0);
+
+  const handleChangeCin = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setCin(suma);
+  };
+
+  const [Vein, setVein] = useState(0);
+
+  const handleChangeVein = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setVein(suma);
+  };
+
+  const [Diez, setDiez] = useState(0);
+
+  const handleChangeDiez = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setDiez(suma);
+  };
+
+  const [Picos, setPicos] = useState(0);
+
+  const handleChangePicos = (e) => {
+    const suma = parseFloat(e.target.value);
+
+    setPicos(suma);
+  };
+
+  var remesa =
+    Mil * 1000 +
+    Qui * 500 +
+    Dos * 200 +
+    Cien * 100 +
+    Cin * 50 +
+    Vein * 20 +
+    Diez * 10 +
+    Picos;
+
+  if (isNaN(remesa)) {
+    remesa = "¡Ingrese todos los valores!";
+  }
 
   return (
     <div
@@ -34,7 +104,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -67,7 +136,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -81,6 +149,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Qui}
+              onChange={handleChangeQui}
             />
           </div>
         </form>
@@ -98,7 +168,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -112,6 +181,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Dos}
+              onChange={handleChangeDos}
             />
           </div>
         </form>
@@ -129,7 +200,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -143,6 +213,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Cien}
+              onChange={handleChangeCien}
             />
           </div>
         </form>
@@ -160,7 +232,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -174,6 +245,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Cin}
+              onChange={handleChangeCin}
             />
           </div>
         </form>
@@ -191,7 +264,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -205,6 +277,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Vein}
+              onChange={handleChangeVein}
             />
           </div>
         </form>
@@ -222,7 +296,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -236,6 +309,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Diez}
+              onChange={handleChangeDiez}
             />
           </div>
         </form>
@@ -253,7 +328,6 @@ const Formulario = () => {
             }}
           >
             <label
-              for="exampleInputEmail1"
               className="form-label"
               style={{
                 color: "white",
@@ -267,6 +341,8 @@ const Formulario = () => {
               type="number"
               class="form-control"
               style={{ margin: "0px" }}
+              value={Picos}
+              onChange={handleChangePicos}
             />
           </div>
         </form>
@@ -276,7 +352,7 @@ const Formulario = () => {
           className="m-3"
           style={{ justifyContent: "center", display: "flex", color: "white" }}
         >
-          TOTAL REMESA: {remesa}
+          Total Remesa: {remesa}
         </h2>
       </div>
     </div>
