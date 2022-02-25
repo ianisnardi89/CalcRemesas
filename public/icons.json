@@ -1,11 +1,4 @@
 {
-  "short_name": "Calculadora",
-  "name": "Calculadora de Remesas",
-  "description": "Calculadora de Remesas",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#1E3481",
-  "background_color": "#ffffff",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",
