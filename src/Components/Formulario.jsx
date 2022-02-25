@@ -4,7 +4,7 @@ const Formulario = () => {
   const [Mil, setMil] = useState(0);
 
   const handleChangeMil = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setMil(suma);
   };
@@ -12,7 +12,7 @@ const Formulario = () => {
   const [Qui, setQui] = useState(0);
 
   const handleChangeQui = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setQui(suma);
   };
@@ -20,7 +20,7 @@ const Formulario = () => {
   const [Dos, setDos] = useState(0);
 
   const handleChangeDos = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setDos(suma);
   };
@@ -28,7 +28,7 @@ const Formulario = () => {
   const [Cien, setCien] = useState(0);
 
   const handleChangeCien = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setCien(suma);
   };
@@ -36,7 +36,7 @@ const Formulario = () => {
   const [Cin, setCin] = useState(0);
 
   const handleChangeCin = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setCin(suma);
   };
@@ -44,7 +44,7 @@ const Formulario = () => {
   const [Vein, setVein] = useState(0);
 
   const handleChangeVein = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setVein(suma);
   };
@@ -52,7 +52,7 @@ const Formulario = () => {
   const [Diez, setDiez] = useState(0);
 
   const handleChangeDiez = (e) => {
-    const suma = parseFloat(e.target.value);
+    const suma = parseInt(e.target.value);
 
     setDiez(suma);
   };
@@ -75,8 +75,15 @@ const Formulario = () => {
     Diez * 10 +
     Picos;
 
-  if (isNaN(remesa)) {
-    remesa = "¡Ingrese todos los valores!";
+  function formatNumber(numero) {
+    if (isNaN(numero)) {
+      return "¡Ingrese todos los valores!";
+    } else {
+      return new Intl.NumberFormat("ES-AR", {
+        style: "currency",
+        currency: "ARS",
+      }).format(numero);
+    }
   }
 
   return (
@@ -352,7 +359,7 @@ const Formulario = () => {
           className="m-3"
           style={{ justifyContent: "center", display: "flex", color: "white" }}
         >
-          Total Remesa: {remesa}
+          Total Remesa: {formatNumber(remesa)}
         </h2>
       </div>
     </div>
